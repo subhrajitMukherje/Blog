@@ -15,6 +15,7 @@ export default function RegisterPage() {
       alert('registration successful');
     } else {
       alert('registration failed');
+      console.log()
     }
   }
   return (
