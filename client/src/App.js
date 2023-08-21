@@ -1,6 +1,8 @@
+/* eslint-disable no-unused-vars */
 import './App.css';
 import {Route, Routes} from "react-router-dom";
 import Post from "./Post";
+// eslint-disable-next-line no-unused-vars
 import Header from "./Header";
 import Layout from "./Layout";
 import IndexPage from "./pages/IndexPage";
