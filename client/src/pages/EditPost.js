@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {Navigate, useParams} from "react-router-dom";
 import Editor from "../Editor";
+const url=process.env.REACT_APP_URL;
 
 export default function EditPost() {
   const {id} = useParams();
@@ -11,7 +12,7 @@ export default function EditPost() {
   const [redirect,setRedirect] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:4000/post/'+id)
+    fetch(`${url}/post/`+id)
       .then(response => {
         response.json().then(postInfo => {
           setTitle(postInfo.title);
@@ -19,6 +20,7 @@ export default function EditPost() {
           setSummary(postInfo.summary);
         });
       });
+      //eslint-disable-next-line
   }, []);
 
   async function updatePost(ev) {
