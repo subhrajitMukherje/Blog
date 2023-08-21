@@ -48,11 +48,15 @@ app.get("/", (req, res) => {
   });
 app.post('/register', async (req, res) => {
     const { username, password } = req.body;
+    try{
         const userDoc = await User.create({
             username,
             password: bcrypt.hashSync(password, salt),
         });
         res.json(userDoc);
+    }catch(e){
+        console.log(e);
+    }
 });
 
 app.post('/login', async (req, res) => {
