@@ -43,6 +43,9 @@ mongoose
 
 
 // register api
+app.get("/", (req, res) => {
+    res.send("Welcome to the API");
+  });
 app.post('/register', async (req, res) => {
     const { username, password } = req.body;
         const userDoc = await User.create({
