@@ -13,13 +13,18 @@ const env = require('dotenv').config();
 
 
 
+
 const salt = bcrypt.genSaltSync(10)
 const secret = 'asjldf923ljfs09slkdfwjskld9'
 
+
+
+app.use(cors({ origin: "https://earnest-travesseiro-10db1d.netlify.app/", optionsSuccessStatus: 200 }));
+
 const app = express()
+
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-app.use(cors({ origin: "*", optionsSuccessStatus: 200 }));
 app.use(express.json())
 
 app.use(cookieParser())
