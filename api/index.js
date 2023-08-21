@@ -24,7 +24,7 @@ const secret = 'asjldf923ljfs09slkdfwjskld9'
 const app = express()
 
 
-app.use(cors({ 'Access-Control-Allow-Origin': 'https://earnest-travesseiro-10db1d.netlify.app' ,'Access-Control-Allow-Credentials': true, optionsSuccessStatus: 200 }));
+app.use(cors({ origin: 'https://earnest-travesseiro-10db1d.netlify.app' ,'Access-Control-Allow-Credentials':false, optionsSuccessStatus: 200 }));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
