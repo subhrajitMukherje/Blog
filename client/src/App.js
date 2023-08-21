@@ -1,5 +1,7 @@
 import './App.css';
 import {Route, Routes} from "react-router-dom";
+import Post from "./Post";
+import Header from "./Header";
 import Layout from "./Layout";
 import IndexPage from "./pages/IndexPage";
 import LoginPage from "./pages/LoginPage";

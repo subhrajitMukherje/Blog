@@ -11,22 +11,15 @@ const uploadMiddleware = multer({ dest: 'uploads/' })
 const fs = require('fs')
 const env = require('dotenv').config();
 
-
-
-
 const salt = bcrypt.genSaltSync(10)
 const secret = 'asjldf923ljfs09slkdfwjskld9'
-
-
-
-
 
 const app = express()
 
 
-app.use(cors({ origin: 'https://earnest-travesseiro-10db1d.netlify.app' ,credentials: true, optionsSuccessStatus: 200 }));
-
 app.use('/uploads', express.static(__dirname + '/uploads'));
+
+app.use(cors({ credentials: true,origin: 'https://earnest-travesseiro-10db1d.netlify.app' }));
 
 app.use(express.json())
 
