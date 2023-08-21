@@ -19,7 +19,7 @@ const secret = 'asjldf923ljfs09slkdfwjskld9'
 const app = express()
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-app.use(cors({ credentials: true, origin: 'https://earnest-travesseiro-10db1d.netlify.app/' }))
+app.use(cors({ origin: "*", optionsSuccessStatus: 200 }));
 app.use(express.json())
 
 app.use(cookieParser())
