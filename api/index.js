@@ -24,7 +24,7 @@ const secret = 'asjldf923ljfs09slkdfwjskld9'
 const app = express()
 
 
-app.use(cors({ origin: "*", optionsSuccessStatus: 200 }));
+app.use(cors({ 'Access-Control-Allow-Origin': '*' ,'Access-Control-Allow-Credentials': true, optionsSuccessStatus: 200 }));
 
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
